@@ -136,3 +136,127 @@ A cor e seu conteúdo como ícones e texto, vai depender do contexto que está s
 Caso algum erro de redirecionamento ocorra ou perda de informações aconteça, essa tela deve ser apresentada ao usuário, independente do momento que o erro ocorrer.
 
 ---
+
+## Requisitos não funcionais
+
+| ID    | Requisito              | Prioridade |
+|-------|------------------------|------------|
+| RNF01 | Interface responsiva   | Alta       |
+| RNF02 | Verificação de campos  | Alta       |
+| RNF03 | Verificação de dados   | Alta       |
+| RNF04 | Documentação           | Média      |
+| RNF05 | Práticas de código     | Alta       |
+| RNF06 | Alertas e notificações | Alta       |
+| RNF07 | Tamanho de componentes | Alta       |
+| RNF08 | Organização do projeto | Alta       |
+| RNF09 | Performance            | Média      |
+
+## Descrição dos Requisitos não funcionais
+
+---
+
+### RNF01 - Interface responsiva
+
+| Data de Criação | Última Alteração | Versão | Tipo        |
+|-----------------|------------------|--------|-------------|
+| 02/07/2026      | 02/07/2026       | 1.0.1  | Usabilidade |
+
+#### Descrição
+
+O sistema deve ser capaz de se adaptar a diferentes resoluções de tela e dispositivos, mantendo a usabilidade e a consistência da interface.
+
+---
+
+### RNF02 - Verificação de campos
+
+| Data de Criação | Última Alteração | Versão | Tipo       |
+|-----------------|------------------|--------|------------|
+| 02/07/2026      | 02/07/2026       | 1.0.1  | Segurança  |
+
+#### Descrição
+
+Sempre que um formulário for enviado, o sistema deverá validar os dados informados, verificando se cada campo atende ao formato esperado antes de prosseguir com o processamento.
+
+---
+
+### RNF03 - Verificação de dados
+
+| Data de Criação | Última Alteração | Versão | Tipo       |
+|-----------------|------------------|--------|------------|
+| 02/07/2026      | 02/07/2026       | 1.0.1  | Segurança  |
+
+#### Descrição
+
+Os dados utilizados durante os processos de autenticação e cadastro deverão ser tratados de forma consistente, garantindo a integridade das informações e evitando inconsistências durante as validações.
+
+---
+
+### RNF04 - Documentação
+
+| Data de Criação | Última Alteração | Versão | Tipo              |
+|-----------------|------------------|--------|-------------------|
+| 02/07/2026      | 02/07/2026       | 1.0.1  | Manutenibilidade  |
+
+#### Descrição
+
+A documentação do projeto deverá ser mantida atualizada, refletindo as alterações realizadas durante o desenvolvimento da aplicação.
+
+---
+
+### RNF05 - Práticas de código
+
+| Data de Criação | Última Alteração | Versão | Tipo              |
+|-----------------|------------------|--------|-------------------|
+| 02/07/2026      | 02/07/2026       | 1.0.1  | Manutenibilidade  |
+
+#### Descrição
+
+O código deverá seguir boas práticas de desenvolvimento, incluindo identação consistente, nomenclatura padronizada, componentização, reutilização de código, refatoração quando necessária e organização da estrutura do projeto.
+
+---
+
+### RNF06 - Alertas e notificações
+
+| Data de Criação | Última Alteração | Versão | Tipo        |
+|-----------------|------------------|--------|-------------|
+| 02/07/2026      | 02/07/2026       | 1.0.1  | Usabilidade |
+
+#### Descrição
+
+O sistema deve alertar o usuário do resultado final de alguma requisição, podendo ser positiva ou negativa, como também deve demonstrar telas de carregamento para alertar que o sistema está carregando a sua resposta. Além disso os textos devem ser claros e objetivos, utilizando uma linguagem simples e direta, para evitar ambiguidades e desconforto ao usuário por utilizar alguma linguagem muito técnica.
+
+---
+
+### RNF07 - Tamanho de componentes
+
+| Data de Criação | Última Alteração | Versão | Tipo        |
+|-----------------|------------------|--------|-------------|
+| 02/07/2026      | 02/07/2026       | 1.0.1  | Usabilidade |
+
+#### Descrição
+
+Os componentes da interface deverão possuir dimensões que favoreçam a usabilidade, garantindo boa legibilidade e facilidade de interação para diferentes perfis de usuários.
+
+---
+
+### RNF08 - Organização do projeto
+
+| Data de Criação | Última Alteração | Versão | Tipo             |
+|-----------------|------------------|--------|------------------|
+| 02/07/2026      | 02/07/2026       | 1.0.0  | Manutenibilidade |
+
+#### Descrição
+
+A estrutura do projeto deverá seguir uma organização modular, separando componentes, páginas, serviços, contextos e utilitários para facilitar a manutenção e evolução da aplicação.
+
+---
+
+### RNF09 - Performance
+
+| Data de Criação | Última Alteração | Versão | Tipo        |
+|-----------------|------------------|--------|-------------|
+| 02/07/2026      | 02/07/2026       | 1.0.0  | Desempenho  |
+
+#### Descrição
+
+A aplicação deverá apresentar tempo de carregamento reduzido e manter boa fluidez durante a navegação entre as telas.
