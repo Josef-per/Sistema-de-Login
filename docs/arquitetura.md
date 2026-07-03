@@ -111,6 +111,10 @@ projeto/
 |
 ├── docs/
 │   ├── diagramas/
+|   |   └── bpmn/
+|   |       ├── diagram.bpmn
+|   |       └── README.md
+|   |
 │   ├── requisitos.md
 │   └── roadmap.md
 │
@@ -119,8 +123,8 @@ projeto/
 │
 ├── src/
 |   ├── assets/
-|   | ├── icons/
-│   | └── images/
+|   |   ├── icons/
+│   |   └── images/
 |   |
 |   ├── controllers/
 │   ├── models/
