@@ -41,6 +41,6 @@ A documentação completa do sistema vai estar disponível na pasta `/docs` do p
 
 - [Requisitos Funcionais](docs/requisitos.md)
 - [Reuisitos Não Funcionais](docs/requisitos.md)
-- [Casos de Uso](docs/diagramas/caso_de_uso.png)
+- [Casos de Uso](docs/diagramas/caso_de_uso.md)
 - [Arquitetura](docs/arquiterura.md)
 - [Roadmap](docs/roadmap.md)
