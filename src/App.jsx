@@ -1,4 +1,5 @@
 //criando a variavel root para fazer a importação dos componentes para o html
+import React from "react";
 
 const App = () => {
     return (

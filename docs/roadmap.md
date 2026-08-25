@@ -24,3 +24,5 @@ Essa tabela fica responsável em guardar as informações e o que foi feito no d
 | 01/07/2026 | Criação do projeto e Inicialização da etapa 1 |
 | 02/07/2026 | Continuação da Etapa 1                        |
 | 02/07/2026 | Continuação da Etapa 1, criação dos diagramas |
+| 06/07/2026 | Finalização da Etapa 1, Inicio Etapa 2        |
+| 07/07/2026 | Finalização da Etapa 2                        |
