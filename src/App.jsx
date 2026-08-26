@@ -3,6 +3,7 @@ import React from "react";
 import {Route, Routes} from "react-router-dom";
 
 import Login from "./views/Login/Login";
+import Cadastro from "./views/Cadastro/Cadastro";
 
 const App = () => {
     return (
@@ -11,6 +12,7 @@ const App = () => {
             <Route path="/" element={<Login />} />
 
             {/*Criar os outros caminhos a medida que as telas vão ficando prontas*/}
+            <Route path="/views/Cadastro/Cadastro.jsx" element={<Cadastro />} />
         </Routes>
     );
 };

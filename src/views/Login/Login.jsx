@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 import "./Login.css"
 
 //importando os ícones
-import {Shield, Mail, Lock, Eye, EyeOff} from "lucide-react"
+import { Mail, Lock, Eye, EyeOff} from "lucide-react"
 
 //importando componentes
 import FormInput from "../../components/FormInput/FormInput";
+import LoginHeader from "../../components/LoginHeader/LoginHeader";
 
 
 //telinha
@@ -68,15 +69,10 @@ export default function Login(){
             <main className="login-page">
                 <section className="login-container">
 
-                    <div className="login-header">
-                        <div className="login-icon">
-                            <Shield size={20} color="#5138ff"/>
-                        </div>
-
-                        <h1>Entrar na conta</h1>
-
-                        <p>Acesse o sistema com suas credencias</p>
-                    </div>
+                    <LoginHeader 
+                        title="Entrar na conta"
+                        subtitle="Acesso o sistema com suas credenciais"    
+                    />
 
                     <div className="login-card">
 
