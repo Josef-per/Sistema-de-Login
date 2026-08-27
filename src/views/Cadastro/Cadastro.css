@@ -1,0 +1,304 @@
+.cadastro-page {
+    min-height: 100vh;
+    background: var(--color-background);
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    padding: 32px 16px;
+}
+
+.cadastro-section {
+    width: 100%;
+    max-width: 520px;
+}
+
+.cadastro-card {
+    width: 100%;
+    margin-top: 28px;
+    padding: 28px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border-card);
+    border-radius: var(--radius-lg);
+    box-sizing: border-box;
+}
+
+.cadastro-form {
+    width: 100%;
+}
+
+.cadastro-form-phase {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Requisitos da senha */
+
+.password-requirements {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    padding: 14px 16px;
+    margin-bottom: 12px;
+
+    background: var(--color-input);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+.password-requirements p {
+    margin: 0 0 4px;
+
+    color: var(--text-secondary);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+}
+
+.password-requirements span {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    color: var(--text-muted);
+    font-size: 0.82rem;
+
+    transition: color 0.2s ease;
+}
+
+.password-requirements span.valid {
+    color: #00d6a3;
+}
+
+/* Botão de visualizar senha */
+
+.password-toggle {
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.password-toggle:hover {
+    color: var(--text-secondary);
+}
+
+/* CEP */
+
+.cep-helper {
+    margin-top: -10px;
+    color: var(--text-muted);
+    font-size: 0.72rem;
+}
+
+/* Linhas do endereço */
+
+.address-row {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.address-street {
+    flex: 1;
+}
+
+.address-number {
+    width: 110px;
+}
+
+.address-city {
+    flex: 1;
+}
+
+.address-state {
+    width: 105px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Estado / UF */
+
+.form-label {
+    color: var(--text-secondary);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+}
+
+.select-wrapper {
+    width: 100%;
+}
+
+.select-wrapper select {
+    width: 100%;
+    height: 44px;
+    padding: 0 14px;
+    background: var(--color-input);
+    color: var(--text-primary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    outline: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.select-wrapper select:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(81, 56, 255, 0.12);
+}
+
+.select-wrapper select option {
+    background: var(--color-surface);
+    color: var(--text-primary);
+}
+
+/* Complemento opcional */
+
+.optional-label {
+    color: var(--text-muted);
+    font-size: 0.68rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+/* Botões */
+
+.cadastro-button {
+    width: 100%;
+    min-height: 44px;
+    border: none;
+    border-radius: var(--radius-md);
+    background: var(--color-primary);
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.cadastro-button:hover {
+    filter: brightness(1.08);
+    box-shadow: 0 6px 20px rgba(81, 56, 255, 0.18);
+}
+
+.cadastro-button:active {
+    transform: scale(0.99);
+}
+
+.cadastro-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 2px;
+}
+
+.cadastro-actions .cadastro-button {
+    flex: 1;
+}
+
+.cadastro-back-button {
+    min-width: 92px;
+    min-height: 44px;
+    padding: 0 16px;
+    background: transparent;
+    color: var(--text-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-size: 0.88rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition:
+        border-color 0.2s ease,
+        color 0.2s ease,
+        background 0.2s ease;
+}
+
+.cadastro-back-button:hover {
+    color: var(--text-primary);
+    border-color: var(--text-muted);
+    background: var(--color-input);
+}
+
+/* Divisor */
+
+.cadastro-divider {
+    width: 100%;
+    height: 1px;
+    margin: 20px 0;
+    background: var(--color-divider);
+}
+
+/* Já possui conta */
+
+.login-text {
+    margin: 0;
+    color: var(--text-register);
+    font-size: 0.82rem;
+    text-align: center;
+}
+
+.login-text a {
+    margin-left: 4px;
+    color: var(--color-link);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login-text a:hover {
+    text-decoration: underline;
+}
+
+/* Mensagens de erro */
+
+.form-error {
+    margin-top: -4px;
+    color: var(--color-error);
+    font-size: 0.72rem;
+}
+
+/* Responsividade */
+
+@media (max-width: 600px) {
+    .cadastro-page {
+        padding: 20px 12px;
+    }
+
+    .cadastro-card {
+        margin-top: 22px;
+        padding: 22px 18px;
+    }
+
+    .address-row {
+        flex-direction: column;
+        gap: 18px;
+        
+    }
+
+    .address-number,
+    .address-state {
+        width: 100%;
+    }
+
+    .cadastro-actions {
+        flex-direction: column-reverse;
+    }
+
+    .cadastro-back-button {
+        width: 100%;
+    }
+}

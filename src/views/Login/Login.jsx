@@ -130,7 +130,7 @@ export default function Login(){
                         <p className="register-text">
                             Não tem uma conta?
 
-                            <Link to="/cadastro">
+                            <Link to="/Cadastro">
                                 Criar conta
                             </Link>
                         </p>

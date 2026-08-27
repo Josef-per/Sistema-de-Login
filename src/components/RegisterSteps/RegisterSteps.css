@@ -1,0 +1,97 @@
+.register-steps {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 28px;
+}
+
+/* Etapas */
+
+.register-step {
+    width: 92px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+/* Círculo */
+
+.step-circle {
+    width: 26px;
+    height: 26px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid var(--color-border);
+    border-radius: 50%;
+
+    background: var(--color-surface);
+
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    font-weight: 600;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+/* Texto */
+
+.step-label {
+    margin-top: 8px;
+
+    color: var(--text-muted);
+    font-size: 0.68rem;
+    font-weight: 500;
+
+    white-space: nowrap;
+
+    transition: color 0.2s ease;
+}
+
+/* Linha */
+
+.step-line {
+    flex: 1;
+    height: 1px;
+
+    margin-top: 13px;
+
+    background: var(--color-divider);
+
+    transition: background 0.25s ease;
+}
+
+/* Etapa ativa */
+
+.register-step.active .step-circle {
+    border-color: var(--color-primary);
+    background: var(--color-icon-background);
+    color: var(--text-primary);
+}
+
+.register-step.active .step-label {
+    color: var(--color-link);
+}
+
+/* Etapa concluída */
+
+.register-step.completed .step-circle {
+    border-color: var(--color-primary);
+    background: var(--color-primary);
+    color: var(--text-primary);
+}
+
+.register-step.completed .step-label {
+    color: var(--text-secondary);
+}
+
+.step-line.completed {
+    background: var(--color-primary);
+}

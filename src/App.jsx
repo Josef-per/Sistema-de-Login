@@ -12,7 +12,7 @@ const App = () => {
             <Route path="/" element={<Login />} />
 
             {/*Criar os outros caminhos a medida que as telas vão ficando prontas*/}
-            <Route path="/views/Cadastro/Cadastro.jsx" element={<Cadastro />} />
+            <Route path="/Cadastro" element={<Cadastro />} />
         </Routes>
     );
 };
