@@ -9,6 +9,7 @@ import RegisterSteps from "../../components/RegisterSteps/RegisterSteps";
 
 import { validatePersonalData, validateAddress } from "../../utils/CadastroValidatioin";
 import { buscarCep } from "../../services/ViaCepService"
+import { pwnedPassword } from "../../services/PwnedPasswordsService";
 
 export default function Cadastro (){
 
@@ -57,7 +58,7 @@ export default function Cadastro (){
 
 
     //funcionalidades
-    function handleNextStep() {
+    async function handleNextStep() {
         const errors = validatePersonalData({
             fullName,
             email,
@@ -75,7 +76,25 @@ export default function Cadastro (){
             return;
         }
 
-        setStep(2);
+        //conctando a api de senhas 
+        try {
+            const quantidade = await pwnedPassword(password);
+
+            if (quantidade > 0) {
+                setPasswordError(
+                    "Essa senha já apareceu em vazamentos. Escolha outra."
+                );
+
+                return;
+            }
+
+            setStep(2);
+
+        } catch (error) {
+            setPasswordError(
+                "Não foi possível verificar a segurança da senha."
+            );
+        }
     }
 
     function handleSubmit(event) {
