@@ -7,6 +7,9 @@ import LoginHeader from "../../components/LoginHeader/LoginHeader";
 import FormInput from "../../components/FormInput/FormInput";
 import RegisterSteps from "../../components/RegisterSteps/RegisterSteps";
 
+import { validatePersonalData, validateAddress } from "../../utils/CadastroValidatioin";
+import { buscarCep } from "../../services/ViaCepService"
+
 export default function Cadastro (){
 
     //Pegando os valores dos inputs
@@ -55,49 +58,67 @@ export default function Cadastro (){
 
     //funcionalidades
     function handleNextStep() {
-        let formIsValid = true;
+        const errors = validatePersonalData({
+            fullName,
+            email,
+            password,
+            confirmPassword,
+            passwordRequirements
+        });
 
-        setFullNameError("");
-        setEmailError("");
-        setPasswordError("");
-        setConfirmPasswordError("");
+        setFullNameError(errors.fullName || "");
+        setEmailError(errors.email || "");
+        setPasswordError(errors.password || "");
+        setConfirmPasswordError(errors.confirmPassword || "");
 
-        if (fullName.trim() === "") {
-            setFullNameError("Informe seu nome completo.");
-            formIsValid = false;
-        }
-
-        if (email.trim() === "") {
-            setEmailError("Informe seu e-mail.");
-            formIsValid = false;
-        }
-
-        if (password === "") {
-            setPasswordError("Informe uma senha.");
-            formIsValid = false;
-        } else if (
-            !passwordRequirements.length ||
-            !passwordRequirements.uppercase ||
-            !passwordRequirements.number ||
-            !passwordRequirements.special
-        ) {
-            setPasswordError("A senha não atende aos requisitos.");
-            formIsValid = false;
-        }
-
-        if (confirmPassword === "") {
-            setConfirmPasswordError("Confirme sua senha.");
-            formIsValid = false;
-        } else if (password !== confirmPassword) {
-            setConfirmPasswordError("As senhas não coincidem.");
-            formIsValid = false;
-        }
-
-        if (!formIsValid) {
+        if (Object.keys(errors).length > 0) {
             return;
         }
 
         setStep(2);
+    }
+
+    function handleSubmit(event) {
+        event.preventDefault();
+
+        const errors = validateAddress({
+            cep,
+            logradouro,
+            numero,
+            bairro,
+            cidade,
+            uf
+        });
+
+        setCepError(errors.cep || "");
+        setLogradouroError(errors.logradouro || "");
+        setNumeroError(errors.numero || "");
+        setBairroError(errors.bairro || "");
+        setCidadeError(errors.cidade || "");
+        setUfError(errors.uf || "");
+
+        if (Object.keys(errors).length > 0) {
+            return;
+        }
+
+        console.log("Cadastro válido.");
+    }
+
+    //api via cep
+    async function handleBuscarCep() {
+        try {
+            setCepError("");
+
+            const data = await buscarCep(cep);
+
+            setLogradouro(data.logradouro);
+            setBairro(data.bairro);
+            setCidade(data.localidade);
+            setUf(data.uf);
+
+        } catch (error) {
+            setCepError(error.message);
+        }
     }
 
     return(
@@ -117,7 +138,7 @@ export default function Cadastro (){
 
                         <RegisterSteps step={step} />
 
-                        <form className="cadastro-form">
+                        <form className="cadastro-form" onSubmit={handleSubmit}>
                             {/*Fazer as verificações do cadastro do onsubmit*/}
 
                             {step === 1 &&(
@@ -228,6 +249,7 @@ export default function Cadastro (){
                                             icon={<MapPin size={18} />}
                                             value={cep}
                                             onChange={(event) => setCep(event.target.value)}
+                                            onBlur={handleBuscarCep}
                                             error={cepError}
                                         />
 
@@ -357,6 +379,7 @@ export default function Cadastro (){
                                             <button
                                                 type="submit"
                                                 className="cadastro-button"
+                                                onClick={handleSubmit}
                                             >
                                                 Criar conta
                                             </button>

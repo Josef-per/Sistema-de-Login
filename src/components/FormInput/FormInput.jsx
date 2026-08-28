@@ -11,6 +11,7 @@ export default function FormInput({
     endIcon,
     value,
     onChange,
+    onBlur,
     error
     
 }) {
@@ -33,6 +34,7 @@ export default function FormInput({
                     placeholder={placeholder}
                     value={value}
                     onChange={onChange}
+                    onBlur={onBlur}
                 />
 
                 {endIcon && (
