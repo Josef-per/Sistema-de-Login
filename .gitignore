@@ -1,0 +1,21 @@
+# Dependências
+node_modules/
+
+# Build
+dist/
+build/
+
+# Logs
+*.log
+pnpm-debug.log*
+
+# Variáveis de ambiente
+.env
+.env.*
+
+# IDE
+.vscode/
+
+# Sistema Operacional
+.DS_Store
+Thumbs.dbs
