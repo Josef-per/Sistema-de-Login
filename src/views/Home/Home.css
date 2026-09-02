@@ -1,0 +1,521 @@
+/* =========================================
+   HOME PAGE
+========================================= */
+
+.home-Page {
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+
+    background-color: var(--color-background);
+    color: var(--text-primary);
+}
+
+
+/* =========================================
+   SIDE NAV
+========================================= */
+
+.home-SideNav {
+    width: 310px;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #090d15;
+    border-right: 1px solid var(--color-divider);
+}
+
+
+/* ---------- Título ---------- */
+
+.home-SideNav-Title {
+    height: 91px;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 0 24px;
+
+    border-bottom: 1px solid var(--color-divider);
+}
+
+.home-SideNav-Title svg {
+    width: 40px;
+    height: 40px;
+
+    padding: 9px;
+
+    color: var(--color-link);
+
+    background-color: var(--color-icon-background);
+    border: 1px solid var(--color-border-icon);
+    border-radius: var(--radius-lg);
+}
+
+.home-SideNav-Title h1 {
+    margin: 0;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    color: var(--text-primary);
+}
+
+
+/* ---------- Lista ---------- */
+
+.home-SideNav-ItemsList {
+    display: flex;
+    flex-direction: column;
+
+    padding: 18px 13px;
+}
+
+
+/* ---------- Item ---------- */
+
+.home-SideNav-Items {
+    min-height: 56px;
+
+    display: flex;
+    align-items: center;
+    gap: 17px;
+
+    padding: 0 18px;
+
+    color: var(--text-secondary);
+    text-decoration: none;
+
+    border-radius: 24px;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.home-SideNav-Items svg {
+    flex-shrink: 0;
+}
+
+.home-SideNav-Items span {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+/* Item ativo */
+
+.home-SideNav-Items:first-child {
+    color: #8b82ff;
+    background-color: rgba(81, 56, 255, 0.16);
+}
+
+.home-SideNav-Items:first-child svg {
+    color: #8b82ff;
+}
+
+
+/* Hover */
+
+.home-SideNav-Items:hover {
+    color: var(--text-primary);
+    background-color: rgba(81, 56, 255, 0.12);
+}
+
+
+/* =========================================
+   SIDE NAV - BOTTOM
+========================================= */
+
+.home-SideNav-Bottom {
+    margin-top: auto;
+
+    padding: 28px 30px 30px;
+
+    border-top: 1px solid var(--color-divider);
+}
+
+
+/* ---------- Perfil ---------- */
+
+.home-SideNav-BottomProfile {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    margin-bottom: 28px;
+}
+
+.home-SideNav-BottomProfile p {
+    margin: 0;
+
+    font-size: 14px;
+}
+
+.home-SideNav-BottomProfile p:first-child {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.home-SideNav-BottomProfile p:last-child {
+    color: var(--text-secondary);
+}
+
+
+/* ---------- Logout ---------- */
+
+.home-SideNav-BottomLogout {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+
+    color: var(--text-secondary);
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.home-SideNav-BottomLogout svg {
+    flex-shrink: 0;
+}
+
+.home-SideNav-BottomLogout span {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.home-SideNav-BottomLogout:hover {
+    color: var(--text-primary);
+}
+
+
+/* =========================================
+   DASHBOARD
+========================================= */
+
+.home-Dashboard {
+    flex: 1;
+
+    padding: 43px 46px 60px;
+
+    overflow-y: auto;
+}
+
+
+/* =========================================
+   DASHBOARD - TITLE
+========================================= */
+
+.home-Dashboard-Title {
+    margin-bottom: 47px;
+}
+
+.home-Dashboard-Title h1 {
+    margin: 0 0 10px;
+
+    font-size: 28px;
+    font-weight: 600;
+
+    color: var(--text-primary);
+}
+
+.home-Dashboard-Title p {
+    margin: 0;
+
+    font-size: 18px;
+
+    color: var(--text-secondary);
+}
+
+
+/* =========================================
+   DASHBOARD - CARDS
+========================================= */
+
+.home-Dashboard-CardsList {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+
+    margin-bottom: 44px;
+}
+
+
+/* ---------- Card ---------- */
+
+.home-Dashboard-Card {
+    min-height: 180px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 27px 28px;
+
+    background-color: rgba(81, 56, 255, 0.07);
+
+    border: 1px solid var(--color-border-icon);
+    border-radius: var(--radius-lg);
+
+    box-sizing: border-box;
+}
+
+
+/* Ícone */
+
+.home-Dashboard-Card svg {
+    width: 46px;
+    height: 46px;
+
+    padding: 12px;
+
+    margin-bottom: 18px;
+
+    box-sizing: border-box;
+
+    color: #8178ff;
+
+    background-color: var(--color-icon-background);
+    border-radius: var(--radius-lg);
+}
+
+
+/* Título do card */
+
+.home-Dashboard-Card p:first-of-type {
+    margin: 0 0 12px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    color: var(--text-secondary);
+}
+
+
+/* Valor */
+
+.home-Dashboard-Card p:last-of-type {
+    margin: 0;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    color: var(--text-primary);
+}
+
+
+/* =========================================
+   CORES DOS CARDS
+   Quando você adicionar os outros cards,
+   eles receberão estilos diferentes.
+========================================= */
+
+.home-Dashboard-Card:nth-child(2) {
+    background-color: rgba(0, 190, 150, 0.08);
+    border-color: rgba(0, 190, 150, 0.35);
+}
+
+.home-Dashboard-Card:nth-child(2) svg {
+    color: #00c9a7;
+    background-color: rgba(0, 190, 150, 0.10);
+}
+
+.home-Dashboard-Card:nth-child(3) {
+    background-color: rgba(100, 55, 190, 0.08);
+    border-color: rgba(120, 70, 210, 0.40);
+}
+
+.home-Dashboard-Card:nth-child(3) svg {
+    color: #9b7cff;
+    background-color: rgba(100, 55, 190, 0.12);
+}
+
+
+/* =========================================
+   DASHBOARD - PROFILE
+========================================= */
+
+.home-Dashboard-Profile {
+    min-height: 178px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 28px;
+
+    background-color: var(--color-surface);
+
+    border: 1px solid var(--color-border-card);
+    border-radius: var(--radius-lg);
+
+    box-sizing: border-box;
+}
+
+
+/* ---------- Informações ---------- */
+
+.home-Dashboard-Infos {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+
+/* Ícone do usuário */
+
+.home-Dashboard-Infos > svg {
+    width: 56px;
+    height: 56px;
+
+    padding: 15px;
+
+    box-sizing: border-box;
+
+    color: #8178ff;
+
+    background-color: var(--color-icon-background);
+    border: 1px solid var(--color-border-icon);
+    border-radius: 50%;
+}
+
+
+/* ---------- Textos ---------- */
+
+.home-Dashboard-InfosItens {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-Dashboard-InfosItens h3 {
+    margin: 0 0 5px;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    color: var(--text-primary);
+}
+
+.home-Dashboard-InfosItens > p {
+    margin: 0 0 6px;
+
+    font-size: 14px;
+
+    color: var(--text-secondary);
+}
+
+
+/* ---------- Localização ---------- */
+
+.home-Dashboard-InfosLocal {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.home-Dashboard-InfosLocal svg {
+    color: var(--text-secondary);
+}
+
+.home-Dashboard-InfosLocal p {
+    margin: 0;
+
+    font-size: 14px;
+
+    color: var(--text-secondary);
+}
+
+.home-Dashboard-InfosLocal span {
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   GERENCIAR PERFIL
+========================================= */
+
+.home-Dashboard-Profile > a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    width: fit-content;
+
+    color: var(--color-link);
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    transition: color 0.2s ease;
+}
+
+.home-Dashboard-Profile > a svg {
+    color: var(--color-link);
+}
+
+.home-Dashboard-Profile > a:hover {
+    color: var(--text-primary);
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .home-SideNav {
+        width: 250px;
+    }
+
+    .home-Dashboard {
+        padding: 35px 30px;
+    }
+
+    .home-Dashboard-CardsList {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .home-Page {
+        flex-direction: column;
+    }
+
+    .home-SideNav {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .home-SideNav-Title {
+        height: 75px;
+    }
+
+    .home-SideNav-ItemsList {
+        padding: 10px 13px;
+    }
+
+    .home-SideNav-Bottom {
+        display: none;
+    }
+
+    .home-Dashboard {
+        padding: 30px 20px;
+    }
+
+    .home-Dashboard-Title h1 {
+        font-size: 24px;
+    }
+
+    .home-Dashboard-Title p {
+        font-size: 16px;
+    }
+}

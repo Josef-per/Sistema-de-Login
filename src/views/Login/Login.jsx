@@ -1,5 +1,5 @@
 import React, {useState}  from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Login.css"
 
 //importando os ícones
@@ -23,6 +23,9 @@ export default function Login(){
     //estados de testes de erros
     const [emailError, setErrorEmail] = useState("");
     const [passwordError, setErrorPassword] = useState("");
+
+    //navegações
+    const navegation = useNavigate();
 
     //funções
 
@@ -54,6 +57,8 @@ export default function Login(){
 
         if (!formIsValid){
             return;
+        } else {
+            navigation("/Home");
         }
         
         console.log("Login realizado com sucesso");
