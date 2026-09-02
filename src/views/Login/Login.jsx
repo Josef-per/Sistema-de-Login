@@ -25,7 +25,7 @@ export default function Login(){
     const [passwordError, setErrorPassword] = useState("");
 
     //navegações
-    const navegation = useNavigate();
+    const navigation = useNavigate();
 
     //funções
 
@@ -55,10 +55,10 @@ export default function Login(){
             formIsValid = false;
         }
 
-        if (!formIsValid){
-            return;
-        } else {
+        if (formIsValid){
             navigation("/Home");
+        } else {
+            return
         }
         
         console.log("Login realizado com sucesso");
