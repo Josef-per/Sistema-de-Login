@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Calendar, User, MapPin, Cog } from "lucide-react";
+import { Calendar, User, MapPin, Cog, Clock, FingerprintPattern} from "lucide-react";
 
 import SideNav from "../../components/SideNav/SideNav";
 import "./Home.css"
+import DashboardCards from "../../components/DashboardCards/DashboardCards";
 
 export default function Home(){
 
@@ -21,13 +22,26 @@ export default function Home(){
                         <p>Aqui está um resumo da sua atividade</p>
                     </div>
                     
-                    {/*Posso fazer essa parte virar um componente futuramente*/}
                     <div className="home-Dashboard-CardsList">
-                        <div className="home-Dashboard-Card">
-                            <Calendar size={20} />
-                            <p>CONTA CRIADA EM:</p>
-                            <p>02 de Setembro de 2026</p>
-                        </div>
+
+                        <DashboardCards 
+                            title="CONTA CRIADA EM"
+                            info="02 de setembro de 2026"
+                            icon={Calendar}
+                        />
+
+                        <DashboardCards 
+                            title="ÚLTIMO ACESSO"
+                            info="02/08/2026"
+                            icon={Clock}
+                        />
+
+                        <DashboardCards 
+                            title="TOTAL DE ACESSOS"
+                            info="2 Acessos"
+                            icon={FingerprintPattern}
+                        />
+
                     </div>
 
                     <div className="home-Dashboard-Profile">
@@ -46,7 +60,7 @@ export default function Home(){
                             </div>  
                         </div>
 
-                        <Link >
+                        <Link to="/Perfil">
                             <Cog size={15} />
                             <span>Gerenciar Perfil</span>
                         </Link>
