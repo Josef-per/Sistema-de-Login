@@ -1,0 +1,235 @@
+/* =========================================
+   HOME PAGE
+========================================= */
+
+.home-Page {
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+
+    background-color: var(--color-background);
+    color: var(--text-primary);
+}
+
+/* =========================================
+   DASHBOARD
+========================================= */
+
+.home-Dashboard {
+    flex: 1;
+
+    padding: 43px 46px 60px;
+
+    overflow-y: auto;
+}
+
+
+/* =========================================
+   DASHBOARD - TITLE
+========================================= */
+
+.home-Dashboard-Title {
+    margin-bottom: 47px;
+}
+
+.home-Dashboard-Title h1 {
+    margin: 0 0 10px;
+
+    font-size: 28px;
+    font-weight: 600;
+
+    color: var(--text-primary);
+}
+
+.home-Dashboard-Title p {
+    margin: 0;
+
+    font-size: 18px;
+
+    color: var(--text-secondary);
+}
+
+/* =========================================
+   DASHBOARD - PROFILE
+========================================= */
+
+.home-Dashboard-Profile {
+    min-height: 178px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 28px;
+
+    background-color: var(--color-surface);
+
+    border: 1px solid var(--color-border-card);
+    border-radius: var(--radius-lg);
+
+    box-sizing: border-box;
+}
+
+
+/* ---------- Informações ---------- */
+
+.home-Dashboard-Infos {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+
+/* Ícone do usuário */
+
+.home-Dashboard-Infos > svg {
+    width: 56px;
+    height: 56px;
+
+    padding: 15px;
+
+    box-sizing: border-box;
+
+    color: #8178ff;
+
+    background-color: var(--color-icon-background);
+    border: 1px solid var(--color-border-icon);
+    border-radius: 50%;
+}
+
+
+/* ---------- Textos ---------- */
+
+.home-Dashboard-InfosItens {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-Dashboard-InfosItens h3 {
+    margin: 0 0 5px;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    color: var(--text-primary);
+}
+
+.home-Dashboard-InfosItens > p {
+    margin: 0 0 6px;
+
+    font-size: 14px;
+
+    color: var(--text-secondary);
+}
+
+
+/* ---------- Localização ---------- */
+
+.home-Dashboard-InfosLocal {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.home-Dashboard-InfosLocal svg {
+    color: var(--text-secondary);
+}
+
+.home-Dashboard-InfosLocal p {
+    margin: 0;
+
+    font-size: 14px;
+
+    color: var(--text-secondary);
+}
+
+.home-Dashboard-InfosLocal span {
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   GERENCIAR PERFIL
+========================================= */
+
+.home-Dashboard-Profile > a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    width: fit-content;
+
+    color: var(--color-link);
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    transition: color 0.2s ease;
+}
+
+.home-Dashboard-Profile > a svg {
+    color: var(--color-link);
+}
+
+.home-Dashboard-Profile > a:hover {
+    color: var(--text-primary);
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .home-SideNav {
+        width: 250px;
+    }
+
+    .home-Dashboard {
+        padding: 35px 30px;
+    }
+
+    .home-Dashboard-CardsList {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .home-Page {
+        flex-direction: column;
+    }
+
+    .home-SideNav {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .home-SideNav-Title {
+        height: 75px;
+    }
+
+    .home-SideNav-ItemsList {
+        padding: 10px 13px;
+    }
+
+    .home-SideNav-Bottom {
+        display: none;
+    }
+
+    .home-Dashboard {
+        padding: 30px 20px;
+    }
+
+    .home-Dashboard-Title h1 {
+        font-size: 24px;
+    }
+
+    .home-Dashboard-Title p {
+        font-size: 16px;
+    }
+}

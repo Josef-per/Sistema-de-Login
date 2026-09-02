@@ -4,6 +4,7 @@ import {Route, Routes} from "react-router-dom";
 
 import Login from "./views/Login/Login";
 import Cadastro from "./views/Cadastro/Cadastro";
+import Home from "./views/Home/Home";
 
 const App = () => {
     return (
@@ -13,6 +14,7 @@ const App = () => {
 
             {/*Criar os outros caminhos a medida que as telas vão ficando prontas*/}
             <Route path="/Cadastro" element={<Cadastro />} />
+            <Route path="/Home" element={<Home />} />
         </Routes>
     );
 };

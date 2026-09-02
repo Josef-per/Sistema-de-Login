@@ -1,0 +1,189 @@
+/* =========================================
+   SIDE NAV
+========================================= */
+
+.home-SideNav {
+    width: 310px;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #090d15;
+    border-right: 1px solid var(--color-divider);
+}
+
+
+/* ---------- Título ---------- */
+
+.home-SideNav-Title {
+    height: 91px;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 0 24px;
+
+    border-bottom: 1px solid var(--color-divider);
+}
+
+.home-SideNav-Title svg {
+    width: 40px;
+    height: 40px;
+
+    padding: 9px;
+
+    color: var(--color-link);
+
+    background-color: var(--color-icon-background);
+    border: 1px solid var(--color-border-icon);
+    border-radius: var(--radius-lg);
+}
+
+.home-SideNav-Title h1 {
+    margin: 0;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    color: var(--text-primary);
+}
+
+
+/* ---------- Lista ---------- */
+
+.home-SideNav-ItemsList {
+    display: flex;
+    flex-direction: column;
+
+    padding: 18px 13px;
+}
+
+
+/* ---------- Item ---------- */
+
+.home-SideNav-Items {
+    min-height: 56px;
+
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    margin-bottom: 5px;
+
+    padding: 0 18px;
+
+    color: var(--text-secondary);
+    text-decoration: none;
+
+    border-radius: 24px;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.home-SideNav-Items svg {
+    flex-shrink: 0;
+}
+
+.home-SideNav-Items span {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+/* Item ativo */
+
+.home-SideNav-Items:first-child {
+    color: #8b82ff;
+    background-color: rgba(81, 56, 255, 0.16);
+}
+
+.home-SideNav-Items:first-child svg {
+    color: #8b82ff;
+}
+
+
+/* Hover */
+
+.home-SideNav-Items:hover {
+    color: var(--text-primary);
+    background-color: rgba(89, 85, 110, 0.12);
+}
+
+
+/* ============================= */
+/* SIDENAV - PARTE INFERIOR      */
+/* ============================= */
+
+.home-SideNav-Bottom {
+    margin-top: auto;
+    padding: 24px 16px 22px;
+    border-top: 1px solid var(--color-divider);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Informações do usuário */
+
+.home-SideNav-BottomProfile {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.home-SideNav-BottomProfile p {
+    margin: 0;
+}
+
+.home-SideNav-BottomProfile p:first-child {
+    color: var(--text-primary);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.home-SideNav-BottomProfile p:last-child {
+    color: var(--text-secondary);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+
+/* Botão / link de sair */
+
+.home-SideNav-BottomLogout {
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 0;
+
+    background: transparent;
+    border: none;
+
+    color: var(--text-secondary);
+    text-decoration: none;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.home-SideNav-BottomLogout svg {
+    flex-shrink: 0;
+}
+
+.home-SideNav-BottomLogout:hover {
+    color: var(--text-primary);
+}
